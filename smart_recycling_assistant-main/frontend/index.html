@@ -42,26 +42,35 @@
 
   <select id="wasteType">
     <option value="">-- Choose an item --</option>
-    <option value="organic.html">Banana</option>
-    <option value="plastic.html">Plastic Bottle</option>
-    <option value="glass.html">Glass Jar</option>
-    <option value="paper.html">Paper</option>
-    <option value="battery.html">Battery</option>
-    <option value="medicine.html">Expired Medicine</option>
-    <option value="wrapper.html">Food Wrapper</option>
-    <option value="clothes.html">Old Clothes</option>
+    <option value="banana">Banana</option>
+    <option value="plastic-bottle">Plastic Bottle</option>
+    <option value="glass-jar">Glass Jar</option>
+    <option value="paper">Paper</option>
+    <option value="battery">Battery</option>
+    <option value="medicine">Expired Medicine</option>
+    <option value="food-wrapper">Food Wrapper</option>
+    <option value="clothes">Old Clothes</option>
   </select>
   <br>
-  <button onclick="goToPage()">Check Category</button>
+  <button type="button" onclick="showCategory()">Check Category</button>
+  <p id="result" role="status" aria-live="polite"></p>
 
   <script>
-    function goToPage() {
+    const categories = {
+      banana: "Organic waste: place it in your local food-scraps or compost collection.",
+      "plastic-bottle": "Recyclable in many areas: empty and rinse it, then use your local plastics recycling bin.",
+      "glass-jar": "Often recyclable: empty and rinse it, then use your local glass recycling collection.",
+      paper: "Recyclable when clean and dry. Greasy or food-soiled paper may belong in compost or general waste.",
+      battery: "Special disposal: take it to a battery collection point. Do not put batteries in household recycling or trash.",
+      medicine: "Use a pharmacy or community medicine take-back service. Do not flush it unless the label or local guidance says to.",
+      "food-wrapper": "Usually general waste, unless your local program specifically accepts this type of wrapper.",
+      clothes: "Donate wearable clothes or use a textile collection point; textile recycling availability varies locally."
+    };
+
+    function showCategory() {
       const selected = document.getElementById("wasteType").value;
-      if (selected) {
-        window.location.href = selected; // Directly go to the chosen page
-      } else {
-        alert("Please select an item first!");
-      }
+      document.getElementById("result").textContent = categories[selected]
+        || "Please select an item first.";
     }
   </script>
 
