@@ -1,14 +1,24 @@
-# smart_recycling_assistant
+# ♻️ Smart Recycling Assistant
 
-## Run the Express server
+## About the Project
+Smart Recycling Assistant is a web-based application that helps users identify waste and encourages proper waste segregation and recycling.
 
-From the project root, install dependencies and start the server:
+## Features
+- Waste classification
+- Smart waste identification
+- Supports recycling awareness
+- User-friendly interface
 
-```powershell
-npm.cmd install
-npm.cmd start
-```
+## Technologies Used
+- Python
+- Machine Learning
+- JavaScript
+- HTML
+- CSS
+- Node.js
 
-If your terminal is already in the `backend` folder, run `npm.cmd start` there; it starts the same Express server.
+## Project Objective
+To make waste management easier by helping users identify waste and learn how to dispose of it properly.
 
-Open http://localhost:5000 in your browser to use the frontend.
+## Author
+Sahana S
